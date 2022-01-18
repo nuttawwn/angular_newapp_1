@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular_newapp_1';
+  title = 'newapp_1';
+  onClick()
+  {
+    console.log("Click button");
+    
+  }
 }
