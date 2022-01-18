@@ -1,0 +1,20 @@
+<div>
+    <label>limit : </label>
+    <button (click)="store.decreaseLimit(10)">-</button>
+        {{ store.limit$ | async }}
+    <button (click)="store.increaseLimit(10)">+</button>
+    <!-- <button>-</button><button>+</button> -->
+</div>
+<div>
+    <label>offset : </label>
+    <!-- <button>-</button><button>+</button> -->
+    <button (click)="store.decreaseOffset(10)">-</button>
+        {{ store.offset$ | async }}
+    <button (click)="store.increaseOffset(10)">+</button>
+</div>
+
+    <!-- | async = เครื่องหมาย pipe async -->
+    <!-- limit$, offset$ เป็นตัวแปรประเภท observable ต้องทำการ subscribe เพื่อเอาค่ามาแสดงโดย
+        ใช้ pipe async -->
+    <!--  store.decreaseLimit(10) = ตัว action -->
+    <!--  store.limit$ | async = ตัว selector-->
