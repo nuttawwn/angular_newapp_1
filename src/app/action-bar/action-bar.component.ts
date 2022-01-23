@@ -12,14 +12,14 @@ export class ActionBarComponent implements OnInit {
   num: number = 0
   
   increaseNum() {
-    console.log('"this.increaseNum()"');    
+    //console.log('"this.increaseNum()"');    
     if (this.num >0) {
       this.num = this.num - this.add_num 
       this.numberChange.emit(this.num); // เป็นการส่ง paramater ออกไปพร้อมกับ output Event
     }
   }
   decreaseNum() {
-    console.log("this.decreaseNum");   
+   // console.log("this.decreaseNum");   
     if(this.num <100){
     this.num = this.num + this.add_num;
     this.numberChange.emit(this.num);

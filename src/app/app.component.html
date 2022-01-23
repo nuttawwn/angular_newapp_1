@@ -1,4 +1,4 @@
-<app-action-bar 
+<!-- <app-action-bar 
   (numberChange) = "testNumberChange($event)" 
   [add_num]="5">
 </app-action-bar><br>
@@ -6,4 +6,13 @@
   (numberChange) = "testNumberChange($event)" 
     [add_num]="10"></app-action-bar>
 <button (click)="testEventBind()  ">Test EvenBinding</button>
-<button (click)="resetValue(3)">Restart</button>
+<button (click)="resetValue(3)">Restart</button> -->
+
+<!-- <app-max-min-meter [minLabel]="'min'" [maxLabel]="'max'"> </app-max-min-meter> -->
+<app-max-min-meter 
+  [minLabel]="appMinlabel" 
+  [maxLabel]="appMaxlabel "
+  
+  (minChange)="doAppMinChange($event)"
+  (maxChange)="doAppMaxChange($event)"> 
+</app-max-min-meter>
