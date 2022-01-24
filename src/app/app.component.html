@@ -9,10 +9,34 @@
 <button (click)="resetValue(3)">Restart</button> -->
 
 <!-- <app-max-min-meter [minLabel]="'min'" [maxLabel]="'max'"> </app-max-min-meter> -->
-<app-max-min-meter 
+<!-- <app-max-min-meter 
   [minLabel]="appMinlabel" 
   [maxLabel]="appMaxlabel "
   
   (minChange)="doAppMinChange($event)"
   (maxChange)="doAppMaxChange($event)"> 
-</app-max-min-meter>
+</app-max-min-meter> -->
+<div style="height: 400px;">
+  <label>CSS style binding</label>
+<app-sqaure-flex
+  [divWidth]="squareeWidth"
+  [divHight]="sqaureHeight">
+</app-sqaure-flex>
+</div>
+<div>
+  width : 
+    <!-- <button type="button" (click)="squareeWidth = 1500">default</button> -->
+    <button type="button" (click)="squareeWidth = 500">500px</button>
+    <button type="button" (click)="squareeWidth = 850">850px</button>
+    <button type="button" (click)="squareeWidth = 1000">1000px</button>
+</div>
+<div>
+  hight : 
+  <!-- <button type="button" (click)="sqaureHeight = 350">default</button> -->
+  <button type="button" (click)="sqaureHeight = 100">100px</button>
+  <button type="button" (click)="sqaureHeight = 200">200px</button>
+  <button type="button" (click)="sqaureHeight = 300 ">300px</button>
+</div>
+<div>
+  <button type="button" (click)="(sqaureHeight = 350 )&& (squareeWidth = 1500)">set to default</button>
+</div>
