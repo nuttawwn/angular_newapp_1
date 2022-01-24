@@ -8,6 +8,8 @@ export class AppComponent {
   title = 'angular_newapp_1';
   appMinlabel = 'myAppMinLabel'
   appMaxlabel = 'myAppMaxLabel'
+  sqaureHeight = 350;
+  squareeWidth = 1500;
   testEventBind() {
     console.log("test Evenbinding click");
   }
