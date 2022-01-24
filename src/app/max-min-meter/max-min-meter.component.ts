@@ -9,7 +9,7 @@ export class MaxMinMeterComponent implements OnInit {
   @Input() minLabel = 'minLabel' // รับค่าเข้ามาในหน้าที่มีการหยิบไปใช้
   @Input() maxLabel = 'maxLabel' 
 
-  @Output() minChange = new EventEmitter()
+  @Output() minChange = new EventEmitter()  // เป็นตัวที่ไว้ส่งค่าออกไปและรับจากหน้าใหญ่ที่มีการเรียกใช้ผ่านตัว selector ใน ts.ของ component นั้น
   @Output() maxChange = new EventEmitter()
   
   constructor() { }
@@ -18,7 +18,7 @@ export class MaxMinMeterComponent implements OnInit {
   }
 
   doMinChange(value : number){
-    this.minChange.emit(value)
+    this.minChange.emit(value) // เรียกตัว Output ผ้าน function
   }
 
   doMaxChange(value : number){
@@ -41,4 +41,14 @@ export class MaxMinMeterComponent implements OnInit {
 // <app-max-min-meter 
 //   [minLabel]="appMinlabel" ประกาศในลักษณะแบบนี้จะเป็นการ = ตัวแปรที่มีการสร้างขึ้นมาในหน้า
 //   [maxLabel]="appMaxlabel "> 
+// </app-max-min-meter>
+
+
+
+// <app-max-min-meter 
+//   [minLabel]="appMinlabel"  สำหรับ INput
+//   [maxLabel]="appMaxlabel "
+  
+//   (minChange)="doAppMinChange($event)" สำหรับ Output
+//   (maxChange)="doAppMaxChange($event)"> 
 // </app-max-min-meter>
