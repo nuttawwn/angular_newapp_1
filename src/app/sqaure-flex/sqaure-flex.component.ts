@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sqaure-flex',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sqaure-flex.component.scss']
 })
 export class SqaureFlexComponent implements OnInit {
-
+  
+  @Input() divWidth = 500;
+  @Input() divHight = 200;
   constructor() { }
 
   ngOnInit(): void {
