@@ -1,9 +1,15 @@
 <div>
     <!-- <span>การเพิ่มข้อมูลตัวเลข : {{ add_num}} : </span> -->
     <button type="button" (click)="increaseNum()">-</button>
-    <input 
-        type="text" 
-        [value]="num" 
-       (keydown.Enter)="addNumber()"#panda>
+    <input type="text" [value]="num" *ngIf="inputDisplay else falseDisplay">
     <button type="button" (click)="decreaseNum()">+</button>
+    <br>
+    <ng-template #falseDisplay>
+        <span style="font-size: 30px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 6px;">
+            {{num}}
+        </span>
+    </ng-template>
 </div>

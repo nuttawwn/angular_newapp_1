@@ -11,6 +11,7 @@ export class AppComponent {
   sqaureHeight = 350;
   squareeWidth = 1500;
   appConter = 20;
+  active : boolean = false
   testEventBind() {
     console.log("test Evenbinding click");
   }
@@ -38,3 +39,6 @@ export class AppComponent {
     
   }
 }
+//*ngIf = จะใข้ควบคุม view (<div></div>) หรือ [Structural Directive]
+//ng-Template เป็น template ที่ถูกสร้างขึ้นมาสามารถใส่ ข้อมูลอะไรลงไปก็ได้ และจะยังไม่ถูกใช้งาน จะถูกใช้งานเมื่อ 
+//เรียกผ่าน <ng-template #(ชื่อของ ng-tempalte)>

@@ -10,6 +10,9 @@ export class ActionBarComponent implements OnInit {
  //@Output() total = new EventEmitter
  //การเลือกใช้ EventEmiter ในการทำ output Binding ให้เลือกเฉพาะ @angular/core เท่านั้น
  @Input() num = 0
+ @Input() inputDisplay = true;
+ 
+ 
    increaseNum() {
     //console.log('"this.increaseNum()"');    
     if (this.num >0) {
@@ -25,14 +28,12 @@ export class ActionBarComponent implements OnInit {
     }
   }
   //addNumber(value : number)
-  addNumber()
-  {
-    console.log("add New NUmber>>>>>>>>");
-    
-  }
+
   constructor() { }
   ngOnInit(){
     this.num 
     console.log("this.num action bar>>>>>>>>>>",this.num)
   }
 }
+
+

@@ -7,12 +7,10 @@
     [add_num]="10"></app-action-bar>
 <button (click)="testEventBind()  ">Test EvenBinding</button>
 <button (click)="resetValue(3)">Restart</button> -->
-
 <!-- <app-max-min-meter [minLabel]="'min'" [maxLabel]="'max'"> </app-max-min-meter> -->
 <!-- <app-max-min-meter 
   [minLabel]="appMinlabel" 
   [maxLabel]="appMaxlabel "
-  
   (minChange)="doAppMinChange($event)"
   (maxChange)="doAppMaxChange($event)"> 
 </app-max-min-meter> -->
@@ -38,7 +36,6 @@
 <div>
   <button type="button" (click)="(sqaureHeight = 350 )&& (squareeWidth = 1500)">set to default</button>
 </div> -->
-
 <!-- <app-action-bar
 [num]="20">
 </app-action-bar>
@@ -46,13 +43,33 @@
   [divWidth]="appConter"
   [divHight]="300"
   ></app-sqaure-flex> -->
-  <app-action-bar
+<!-- <app-action-bar
     [num]="appConter"
-    
+    [add_num]="10"
     (numberChange)="appConter = $event">
 </app-action-bar>
   <app-sqaure-flex
   [divWidth]="appConter" 
   [divHight]="300">
-  </app-sqaure-flex>
-   
+  </app-sqaure-flex> -->
+<!-- <div class="btn-group">
+  <label>Activate </label>
+  <button type="button" (click)="active= true">open action bar</button>
+  <button type="button" (click)="active= false">open sqaure flex</button>
+
+</div>
+<div style="height: 30px; padding-top: 5px;">
+  <div *ngIf="active else elseTemnplate">
+    <app-action-bar></app-action-bar>
+  </div>
+  <ng-template #elseTemnplate>
+    <div>
+      <app-sqaure-flex></app-sqaure-flex>
+    </div>
+  </ng-template>
+</div> -->
+
+<div>
+  <app-action-bar [inputDisplay]="false"></app-action-bar>
+  <app-action-bar [inputDisplay]="true"></app-action-bar>
+</div>
