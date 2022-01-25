@@ -39,10 +39,20 @@
   <button type="button" (click)="(sqaureHeight = 350 )&& (squareeWidth = 1500)">set to default</button>
 </div> -->
 
-<app-action-bar
-[num]="appConter">
+<!-- <app-action-bar
+[num]="20">
 </app-action-bar>
 <app-sqaure-flex 
   [divWidth]="appConter"
   [divHight]="300"
-  ></app-sqaure-flex>
+  ></app-sqaure-flex> -->
+  <app-action-bar
+    [num]="appConter"
+    
+    (numberChange)="appConter = $event">
+</app-action-bar>
+  <app-sqaure-flex
+  [divWidth]="appConter" 
+  [divHight]="300">
+  </app-sqaure-flex>
+   

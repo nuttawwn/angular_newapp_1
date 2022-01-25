@@ -1,6 +1,9 @@
 <div>
     <!-- <span>การเพิ่มข้อมูลตัวเลข : {{ add_num}} : </span> -->
     <button type="button" (click)="increaseNum()">-</button>
-    <input type="text" [value]="num">
+    <input 
+        type="text" 
+        [value]="num" 
+       (keydown.Enter)="addNumber()">
     <button type="button" (click)="decreaseNum()">+</button>
 </div>
