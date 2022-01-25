@@ -27,7 +27,7 @@ export class ActionBarComponent implements OnInit {
   //addNumber(value : number)
   addNumber()
   {
-    console.log("add New NUmber>>>>>>>>",this.numberChange.emit(this.num));
+    console.log("add New NUmber>>>>>>>>");
     
   }
   constructor() { }
