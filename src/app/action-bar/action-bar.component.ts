@@ -9,7 +9,7 @@ export class ActionBarComponent implements OnInit {
  @Input() numre : number = 0;
  @Output() numberChange = new EventEmitter
  //การเลือกใช้ EventEmiter ในการทำ output Binding ให้เลือกเฉพาะ @angular/core เท่านั้น
-  num: number = 0
+ @Input() num = 0
   
   increaseNum() {
     //console.log('"this.increaseNum()"');    

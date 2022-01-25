@@ -10,6 +10,7 @@ export class AppComponent {
   appMaxlabel = 'myAppMaxLabel'
   sqaureHeight = 350;
   squareeWidth = 1500;
+  appConter = 20;
   testEventBind() {
     console.log("test Evenbinding click");
   }
