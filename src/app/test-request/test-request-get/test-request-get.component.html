@@ -1,1 +1,9 @@
-<p>test-request-get works!</p>
+<div>
+    <label>name : </label>
+    <input type="text" #myNameInputText/>
+    <button (click)="searchBookList(myNameInputText.value)">ค้นหา</button>
+</div>
+<div *ngFor="let bk of bookList">
+    {{bk.name}}
+    {{bk.isbn}}
+</div>
