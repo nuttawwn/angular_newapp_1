@@ -8,23 +8,23 @@ import { MaterialTestComponent } from './material-test/material-test.component';
 import { RxMatSliderComponent } from './rx-mat-slider/rx-mat-slider.component';
 import { TestRequestModule } from './test-request/test-request.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyDirectiveDirective } from './my-directive.directive';
+import { HttpBookDirective } from './http-book.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RxMatSliderComponent, 
+    RxMatSliderComponent,
     CardComponent,
     ImageUploadPageComponent,
     MaterialTestComponent,
-    MyDirectiveDirective,
+    HttpBookDirective,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     TestRequestModule,
     BrowserAnimationsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
