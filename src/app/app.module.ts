@@ -8,6 +8,7 @@ import { MaterialTestComponent } from './material-test/material-test.component';
 import { RxMatSliderComponent } from './rx-mat-slider/rx-mat-slider.component';
 import { TestRequestModule } from './test-request/test-request.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MyDirectiveDirective } from './my-directive.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CardComponent,
     ImageUploadPageComponent,
     MaterialTestComponent,
+    MyDirectiveDirective,
   ],
   imports: [
     BrowserModule,
