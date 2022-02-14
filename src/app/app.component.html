@@ -1,4 +1,4 @@
-<div style="display: flex;
+<!-- <div style="display: flex;
             flex-direction: column;
             align-content: center;
             flex-wrap: nowrap;
@@ -15,4 +15,37 @@
   <div>
     <button [disabled]="employeeCodeNgModel.invalid" pButton type="button" label="บันทึก"></button>
   </div>
+</div> -->
+<div style="display: flex;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: nowrap;
+            row-gap: 0.5em">
+  <div class="col-12 md;col-6 lg;col-3">
+    <input type="text" [formControl]="weightForm" class="w-full" pInputText placeholder="weight kg" />
+    <p-message *ngIf="weightForm.invalid && weightForm.touched" severity="error" text="กรุณากรอกน้ำหนักด้วย"> </p-message>
+  </div>
+  <div class="col-12 md;col-6 lg;col-3">
+    <input type="text" [formControl]="heightForm" class="w-full" pInputText placeholder="height m" />
+    <p-message *ngIf="heightForm.invalid && heightForm.touched" severity="error" text="กรุณากรอกส่วนสูงด้วย"> </p-message>
+  </div>
+  <div class="col-12 md: col-6 lg: col-3">
+    <button pButton type="button" [disabled]="weightForm.invalid || heightForm.invalid" (click)="calcualte()" label="Calculate BMI"></button>
+    <!-- <span *ngIf="weightForm.invalid && weightForm.touched">กรุณากรอกน้ำหนักด้วย</span>
+    <span *ngIf="heightForm.invalid && heightForm.touched">กรุณากรอกส่วนสูงด้วย</span> -->
+  </div>
+</div>
+<div style="display: flex;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: nowrap;
+            row-gap: 0.5em">
+  <div class="col-12 md: col-6 lg: col-3">BMI : {{bmi}}</div>
+</div>
+<div style="display: flex;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: nowrap;
+            row-gap: 0.5em">
+  <div class="col-12 md: col-6 lg: col-3">INFO : {{info}}</div>
 </div>
