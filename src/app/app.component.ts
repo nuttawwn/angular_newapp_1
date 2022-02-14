@@ -14,6 +14,8 @@ export class AppComponent {
   //เป็นตัวแปลที่เอาไว้เชื่อข้อมูลฝั่ง Html มายัง Typescript
   weightForm = new FormControl(null, Validators.required); // null คือค้่าเริ่มต้น ของตัวแปรที่กำหนดเอาไว้
   heightForm = new FormControl(null, Validators.required);
+  
+
   calcualte() {
     if (this.weightForm.invalid || this.heightForm.invalid) {
       return;
@@ -24,6 +26,12 @@ export class AppComponent {
     console.log("const height>>>>>>", height);
     this.bmi = weight / (height ** 2)
   }
+
+  emailForm = new FormControl(null,[Validators.required,Validators.email]);
+  //จะทำให้ Validators สามารถ กำหนดได้ 2 ตัวพร้อมกัน
+
+
+
 }
 // (ngModelChange) เป้น out-put
 // [ngModel] เป็น INput
